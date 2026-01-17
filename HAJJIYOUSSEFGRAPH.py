@@ -175,7 +175,7 @@ class StyledMSTApp(QWidget):
 
             mst = g.get_mst()
             
-            output = "✅ SUCCESS: Optimal Tree Found\n" + "-"*30 + "\n"
+            output = " SUCCESS: Optimal Tree Found\n" + "-"*30 + "\n"
             total_weight = 0
             for u, v, weight in mst:
                 output += f"Edge ({u} ↔ {v}) \t Weight: {weight}\n"
@@ -184,7 +184,7 @@ class StyledMSTApp(QWidget):
             
             self.result_area.setText(output)
         except Exception as e:
-            self.result_area.setText(f"❌ ERROR\n{str(e)}")
+            self.result_area.setText(f" ERROR\n{str(e)}")
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
